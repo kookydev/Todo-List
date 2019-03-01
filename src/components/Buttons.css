@@ -1,0 +1,46 @@
+.buttons {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+    min-height: 20px;
+    min-width: 100px;
+    padding: 5px 10px;
+    margin: 10px;
+    color: whitesmoke;
+    font-size: 1.2rem;
+    transform: scale(1);
+    transition: box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+
+.buttons:focus {
+    outline: none;
+}
+
+.buttons:active {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(0.9);
+}
+
+.buttons-save {
+    background: rgb(0, 184, 0);
+}
+
+.buttons-save:active {
+    background: rgb(100, 223, 100);
+}
+
+.buttons-complete {
+    background: rgb(238, 203, 0);
+}
+
+.buttons-complete:active {
+    background: rgb(237, 213, 81);
+}
+
+.buttons-delete {
+    background: rgb(255, 25, 0);
+}
+
+.buttons-delete:active {
+    background: rgb(240, 82, 65);
+}
