@@ -6,9 +6,9 @@ import "./App.css";
 class App extends Component {
   vars = {
     listItems: [
-      { label: "This is an item in my list", style: "list-item" },
-      { label: "This is an item in my list", style: "list-item" },
-      { label: "This is an item in my list", style: "list-item" }
+      { label: "This is an item in my list", class: "list-item" },
+      { label: "This is an item in my list", class: "list-item" },
+      { label: "This is an item in my list", class: "list-item" }
     ]
   };
 
