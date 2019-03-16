@@ -4,25 +4,27 @@ import List from "./components/List";
 import "./App.css";
 
 class App extends Component {
-  vars = {
+  state = {
     listItems: [
-      { label: "This is an item in my list", class: "list-item" },
-      { label: "This is an item in my list", class: "list-item" },
-      { label: "This is an item in my list", class: "list-item" }
+      { label: "This is an item in my list", class: "list-item", key: 0 }
     ]
   };
 
-  input = val => {
-    this.vars.listItems.push(val);
+  inputHandler = val => {
+    let listItems = this.state.listItems;
+    let inputObject = { label: val, class: "list-item", key: listItems.length };
+    listItems.push(inputObject);
+    console.log(listItems);
+    this.setState({ listItems: listItems });
   };
-  complete = () => {};
-  delete = () => {};
+  toggleHandler = () => {};
+  deleteHandler = () => {};
   render() {
     return (
       <div className="App">
         <h1>Todo List</h1>
-        <Input />
-        <List listItems={this.vars.listItems} />
+        <Input func={this.inputHandler} />
+        <List listItems={this.state.listItems} />
       </div>
     );
   }

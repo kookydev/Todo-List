@@ -6,9 +6,13 @@ const List = props => {
     <div className="list">
       {props.listItems.map((item, index) => {
         return (
-          <div>
-            <ListItem label={item.label} class={item.class} indexOf={index} />
-          </div>
+          <ListItem
+            label={item.label}
+            class={item.class}
+            key={index}
+            deleteFunc={props.deleteFunc}
+            toggleFunc={props.toggleFunc}
+          />
         );
       })}
     </div>
