@@ -7,6 +7,19 @@
     justify-content: space-between;
     border-radius: 5px;
     margin-bottom: 5px;
+    background-color: whitesmoke;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.complete {
+    color: grey;
+    background-color: rgb(216, 216, 216);
+
+}
+
+.complete .list-item-label {
+    text-decoration: line-through;
 }
 
 .list-item-buttons {

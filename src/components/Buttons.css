@@ -1,7 +1,7 @@
 .buttons {
     border: none;
     border-radius: 10px;
-    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
     min-height: 20px;
     min-width: 100px;
     padding: 5px 10px;
@@ -17,7 +17,7 @@
 }
 
 .buttons:active {
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
     transform: scale(0.9);
 }
 
@@ -30,7 +30,7 @@
 }
 
 .buttons-complete {
-    background: rgb(238, 203, 0);
+    background: rgb(238, 174, 0);
 }
 
 .buttons-complete:active {

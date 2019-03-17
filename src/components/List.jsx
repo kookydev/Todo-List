@@ -8,8 +8,9 @@ const List = props => {
         return (
           <ListItem
             label={item.label}
-            class={item.class}
+            class={`list-item ${item.complete && "complete"}`}
             key={index}
+            index={index}
             deleteFunc={props.deleteFunc}
             toggleFunc={props.toggleFunc}
           />

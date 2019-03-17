@@ -9,12 +9,16 @@ const ListItem = props => {
       <div className="list-item-buttons">
         <Buttons
           class="buttons buttons-complete"
-          func={props.toggleFunc}
+          func={() => {
+            props.toggleFunc(props.index);
+          }}
           label="Toggle Complete"
         />
         <Buttons
           class="buttons buttons-delete"
-          func={props.deleteFunc}
+          func={() => {
+            props.deleteFunc(props.index);
+          }}
           label="Delete"
         />
       </div>

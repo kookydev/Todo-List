@@ -3,22 +3,17 @@ import React, { Component } from "react";
 import "./Input.css";
 
 class Input extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: "" };
+  state = { value: "" };
 
-    this.changeHandler = this.changeHandler.bind(this);
-    this.submitHandler = this.submitHandler.bind(this);
-  }
-
-  changeHandler(e) {
+  changeHandler = e => {
     this.setState({ value: e.target.value });
-  }
+  };
 
-  submitHandler(e) {
+  submitHandler = e => {
     this.props.func(this.state.value);
     e.preventDefault();
-  }
+    this.setState({ value: "" });
+  };
   render() {
     return (
       <form className="input-container" onSubmit={this.submitHandler}>
