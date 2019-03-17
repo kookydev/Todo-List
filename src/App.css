@@ -25,6 +25,7 @@
 
 h1 {
   text-align: center;
+  color: rgb(99, 99, 99);
 }
 
 @keyframes App-logo-spin {

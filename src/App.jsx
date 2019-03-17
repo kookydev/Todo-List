@@ -14,7 +14,6 @@ class App extends Component {
     let listItems = this.state.listItems;
     let inputObject = {
       label: val,
-      key: listItems.length,
       complete: false
     };
     listItems.push(inputObject);
@@ -30,6 +29,7 @@ class App extends Component {
       : (listItems[index].complete = true);
     this.setState({ listItems: listItems });
   };
+
   // Handle a click of the Delete button associated with a list item
   deleteHandler = index => {
     let listItems = this.state.listItems;
@@ -37,6 +37,7 @@ class App extends Component {
     this.setState({ listItems: listItems });
   };
 
+  // Show default instructions if the list is empty
   contentHandler = () => {
     if (this.state.listItems.length === 0) {
       return <Default />;
