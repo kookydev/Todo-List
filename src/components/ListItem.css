@@ -1,11 +1,11 @@
 .list-item {
     width: 100%;
     min-height: 100px;
-    border: 1px solid rgb(212, 212, 212);
+    border: 3px solid rgb(212, 212, 212);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 5px;
     background-color: whitesmoke;
     text-decoration: none;
@@ -13,13 +13,7 @@
 }
 
 .complete {
-    color: grey;
     background-color: rgb(216, 216, 216);
-
-}
-
-.complete .list-item-label {
-    text-decoration: line-through;
 }
 
 .list-item-buttons {
@@ -33,6 +27,12 @@
 .list-item-label {
     width: 80%;
     padding: 20px;
+    color: rgb(44, 44, 44);
+}
+
+.complete .list-item-label {
+    text-decoration: line-through;
+    color: white;
 }
 
 @media only screen and (max-width: 600px) {

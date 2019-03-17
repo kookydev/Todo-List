@@ -1,0 +1,48 @@
+.default-container {
+    padding: 40px 0px 20px 0px;
+    width: 100%;
+    border: 3px dashed rgb(212, 212, 212);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    text-align: center;
+    background-color: whitesmoke;
+    color: rgb(160, 160, 160);
+
+}
+
+.default-container span {
+    margin-top: 5px;
+    font-size: 1.2em
+}
+
+.bouncy-arrow {
+    transform: translateY(-6px) scale(2);
+    animation: arrow-bounce .7s ease-out forwards infinite;
+}
+
+.arrow-shadow {
+    height: 5px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: rgba(160, 160, 160);
+    transform: translateY(0px) scale(.7);
+    opacity: 0.5;
+    animation: arrow-bounce-shadow .7s ease-out forwards infinite;
+}
+
+@keyframes arrow-bounce {
+    50% {
+        transform: translateY(-18px) scale(2);
+    }
+}
+
+@keyframes arrow-bounce-shadow {
+
+    50% {
+        transform: translateY(1px) scale(1.2);
+        opacity: 0.35;
+    }
+}

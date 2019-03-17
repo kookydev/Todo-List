@@ -1,16 +1,12 @@
 import React, { Component } from "react";
 import Input from "./components/Input";
 import List from "./components/List";
+import Default from "./components/Default";
 import "./App.css";
 
 class App extends Component {
   state = {
-    listItems: [
-      {
-        label: "This is an item in my list",
-        complete: false
-      }
-    ]
+    listItems: []
   };
 
   // Create a new list item when the input is submitted
@@ -34,11 +30,25 @@ class App extends Component {
       : (listItems[index].complete = true);
     this.setState({ listItems: listItems });
   };
-
+  // Handle a click of the Delete button associated with a list item
   deleteHandler = index => {
     let listItems = this.state.listItems;
     listItems.splice(index, 1);
     this.setState({ listItems: listItems });
+  };
+
+  contentHandler = () => {
+    if (this.state.listItems.length === 0) {
+      return <Default />;
+    } else {
+      return (
+        <List
+          listItems={this.state.listItems}
+          deleteFunc={this.deleteHandler}
+          toggleFunc={this.toggleHandler}
+        />
+      );
+    }
   };
 
   render() {
@@ -46,11 +56,7 @@ class App extends Component {
       <div className="App">
         <h1>Todo List</h1>
         <Input func={this.inputHandler} />
-        <List
-          listItems={this.state.listItems}
-          deleteFunc={this.deleteHandler}
-          toggleFunc={this.toggleHandler}
-        />
+        {this.contentHandler()}
       </div>
     );
   }
